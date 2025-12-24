@@ -7,7 +7,7 @@ This repository contains the files for the hands-on labs final project.
 - LICENSE (Apache 2.0)
 - README.md
 - CODE_OF_CONDUCT.md
-- CONTRIBUTING.md
+- CONTRIBUTING.md 
 - simple-interest.sh
 
 ## Purpose
