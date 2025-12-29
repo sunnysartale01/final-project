@@ -1,26 +1,11 @@
 #!/bin/bash
-# Script to calculate simple interest
 
-echo "Enter Principal:"
-read P
-if ! [[ "$P" =~ ^[0-9]+$ ]]; then
-  echo "Error: Principal must be a positive number"
-  exit 1
-fi
+# Simple Interest Calculator
 
-echo "Enter Rate of Interest:"
-read R
-if ! [[ "$R" =~ ^[0-9]+$ ]]; then
-  echo "Error: Rate must be a positive number"
-  exit 1
-fi
+read -p "Enter principal amount: " principal
+read -p "Enter rate of interest: " rate
+read -p "Enter time period: " time
 
-echo "Enter Time (in years):"
-read T
-if ! [[ "$T" =~ ^[0-9]+$ ]]; then
-  echo "Error: Time must be a positive number"
-  exit 1
-fi
+simple_interest=$(echo "scale=2; ($principal * $rate * $time) / 100" | bc)
 
-SI=$((P * R * T / 100))
-echo "Simple Interest = $SI"
+echo "Simple Interest = $simple_interest"
